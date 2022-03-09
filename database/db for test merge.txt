@@ -1,0 +1,37 @@
+
+//Them coachtype
+INSERT INTO `coach_type`(`name`, `num_of_seats`, `num_of_front_seats`, `num_of_back_seats`) VALUES ('Test 6 chỗ', 6, 4, 2);
+INSERT INTO `coach_type`(`name`, `num_of_seats`, `num_of_front_seats`, `num_of_back_seats`) VALUES ('Test 8 chỗ', 8, 5, 3)
+
+//Them coach
+INSERT INTO `coaches`(`id_transportation`, `license_plate`, `type`, `phone`) VALUES (8, '38F1-00006', 7, '0111111116');
+INSERT INTO `coaches`(`id_transportation`, `license_plate`, `type`, `phone`) VALUES (8, '38F1-00008', 8, '0111111118');
+INSERT INTO `coaches`(`id_transportation`, `license_plate`, `type`, `phone`) VALUES (8, '38F1-00016', 8, '0111111126');
+
+//Them seat cho type moi
+INSERT INTO `seats`(`id_coach_type`, `alias`, `state`, `floor`, `area`) VALUES (7, 'A1', 1, 1, 1);
+INSERT INTO `seats`(`id_coach_type`, `alias`, `state`, `floor`, `area`) VALUES (7, 'A2', 1, 1, 1);
+INSERT INTO `seats`(`id_coach_type`, `alias`, `state`, `floor`, `area`) VALUES (7, 'A3', 1, 1, 1);
+INSERT INTO `seats`(`id_coach_type`, `alias`, `state`, `floor`, `area`) VALUES (7, 'A4', 1, 1, 1);
+INSERT INTO `seats`(`id_coach_type`, `alias`, `state`, `floor`, `area`) VALUES (7, 'D1', 1, 1, 2);
+INSERT INTO `seats`(`id_coach_type`, `alias`, `state`, `floor`, `area`) VALUES (7, 'D2', 1, 1, 2);
+
+INSERT INTO `seats`(`id_coach_type`, `alias`, `state`, `floor`, `area`) VALUES (8, 'A1', 1, 1, 1);
+INSERT INTO `seats`(`id_coach_type`, `alias`, `state`, `floor`, `area`) VALUES (8, 'A2', 1, 1, 1);
+INSERT INTO `seats`(`id_coach_type`, `alias`, `state`, `floor`, `area`) VALUES (8, 'A3', 1, 1, 1);
+INSERT INTO `seats`(`id_coach_type`, `alias`, `state`, `floor`, `area`) VALUES (8, 'A4', 1, 1, 1);
+INSERT INTO `seats`(`id_coach_type`, `alias`, `state`, `floor`, `area`) VALUES (8, 'A5', 1, 1, 1);
+INSERT INTO `seats`(`id_coach_type`, `alias`, `state`, `floor`, `area`) VALUES (8, 'D1', 1, 1, 2);
+INSERT INTO `seats`(`id_coach_type`, `alias`, `state`, `floor`, `area`) VALUES (8, 'D2', 1, 1, 2);
+INSERT INTO `seats`(`id_coach_type`, `alias`, `state`, `floor`, `area`) VALUES (8, 'D3', 1, 1, 2);
+
+//Them ticket
+INSERT INTO `tickets`(`id_trip`, `id_user`, `id_seat`, `book_date`, `state`, `departure_location`, `arrival_location`) VALUES (12, 18, 271, '2022-03-04 12:00:00', 0, 'Bến xe Hà Tĩnh',  'Bến xe Nước Ngầm');
+INSERT INTO `tickets`(`id_trip`, `id_user`, `id_seat`, `book_date`, `state`, `departure_location`, `arrival_location`) VALUES (12, 19, 272, '2022-03-04 12:00:00', 0, 'Bến xe Hà Tĩnh',  'Bến xe Nước Ngầm');
+INSERT INTO `tickets`(`id_trip`, `id_user`, `id_seat`, `book_date`, `state`, `departure_location`, `arrival_location`) VALUES (12, 20, 273, '2022-03-04 12:00:00', 0, 'Bến xe Hà Tĩnh',  'Bến xe Nước Ngầm');
+INSERT INTO `tickets`(`id_trip`, `id_user`, `id_seat`, `book_date`, `state`, `departure_location`, `arrival_location`) VALUES (13, 21, 277, '2022-03-04 12:00:00', 0, 'Bến xe Hà Tĩnh',  'Bến xe Nước Ngầm');
+INSERT INTO `tickets`(`id_trip`, `id_user`, `id_seat`, `book_date`, `state`, `departure_location`, `arrival_location`) VALUES (13, 22, 278, '2022-03-04 12:00:00', 0, 'Bến xe Hà Tĩnh',  'Bến xe Nước Ngầm');
+INSERT INTO `tickets`(`id_trip`, `id_user`, `id_seat`, `book_date`, `state`, `departure_location`, `arrival_location`) VALUES (14, 23, 277, '2022-03-04 12:00:00', 0, 'Bến xe Hà Tĩnh',  'Bến xe Nước Ngầm');
+INSERT INTO `tickets`(`id_trip`, `id_user`, `id_seat`, `book_date`, `state`, `departure_location`, `arrival_location`) VALUES (14, 24, 278, '2022-03-04 12:00:00', 0, 'Bến xe Hà Tĩnh',  'Bến xe Nước Ngầm');
+INSERT INTO `tickets`(`id_trip`, `id_user`, `id_seat`, `book_date`, `state`, `departure_location`, `arrival_location`) VALUES (14, 25, 279, '2022-03-04 12:00:00', 0, 'Bến xe Hà Tĩnh',  'Bến xe Nước Ngầm');
+INSERT INTO `tickets`(`id_trip`, `id_user`, `id_seat`, `book_date`, `state`, `departure_location`, `arrival_location`) VALUES (14, 26, 280, '2022-03-04 12:00:00', 0, 'Bến xe Hà Tĩnh',  'Bến xe Nước Ngầm');

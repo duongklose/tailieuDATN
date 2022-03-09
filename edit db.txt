@@ -1,0 +1,26 @@
+-seats
+	+ id_trip
+
+-carts
+	+ id
+	+ phone_user
+	+ total
+	+ payment_id
+
+-cart_ticket
+	+ id
+	+ id_cart
+	+ id_ticket
+
+locations -> stations
+
+- trip:
+	phone
+
+- user_info
+	phone primary key
+	name
+
+- user:
+	delete id, phone primary key
+	avatar BLOB

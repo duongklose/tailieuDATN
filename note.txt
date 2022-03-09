@@ -1,0 +1,25 @@
+Đặt vé:
+-	Vé xe vip/vé xe thường
+-	Chọn điểm đón, chọn điểm trả
+-	Gửi thêm đồ
+-	Đăng ký ăn trưa/tối cùng nhà xe
+-	Đăng ký mua quà trên đường (đặc sản của một số tỉnh đi qua)
+Theo dõi lịch sử hoạt động:
+-	Theo dõi lịch sử đặt vé
+-	Theo dõi lịch sử tìm kiếm
+Phản hồi:
+-	Bình luận phản hồi về app, về nhà xe
+-	Đánh giá chất lượng nhà xe: tài xế, lơ xe
+App sẽ gửi thêm các thông báo khi xe sắp đến, dự báo thời gian xe đến (khi xe bắt đầu ra khỏi bến) – người dùng phải nhập địa chỉ đón hoặc bật GPS.
+Có 1 bản đồ hiển thị chuyến đường của xe, kết hợp cùng vị trí của khách hàng.
+-----------------------------------------------------------------------------------------------
+Khách hàng đặt vé trực tiếp sẽ được nhà xe thêm thủ công dựa vào phone của khách hàng:
+- nếu phone tồn tại thì trả về id user để insert dữ liệu 
+- nếu phone chưa tồn tại thì tạo mới user nhưng chỉ thêm trường phone(trường name để NULL).
+--> Lúc user đăng ký, 
+	- check phone tồn tại:
+		- check name != NULL tài khoản đã tồn tại.
+		- check name == NULL rồi trả về id -> update dữ liệu
+	- check phone chưa tồn tại: thêm mới + để name mặc định (nếu user không thêm) là UVNTxxxx (xxxx là id user)
+
+						

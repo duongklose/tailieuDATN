@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">VinaTravel</string>
+    <string name="slogan">Hệ thống vé xe lớn nhất Việt Nam</string>
+    <string name="title_home">Trang chủ</string>
+    <string name="title_manage_ticket">Quản lý vé</string>
+    <string name="title_notification">Thông báo</string>
+    <string name="title_profile">Tài khoản</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="list_province">
+        <item>Hà Nội</item>
+        <item>TP. Hồ Chí Minh</item>
+        <item>Đà Nẵng</item>
+        <item>Hải Phòng</item>
+        <item>Nha Trang</item>
+    </string-array>
+    <string-array name="list_bank">
+        <item>Viettinbank</item>
+        <item>Vietcombank</item>
+        <item>Techcombank</item>
+        <item>MB Bank</item>
+        <item>TP Bank</item>
+    </string-array>
+    <string name="BASE_URL">http://localhost:5000/api/v1/</string>
+</resources>

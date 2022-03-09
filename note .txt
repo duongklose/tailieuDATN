@@ -1,0 +1,9 @@
+
+
+- Admin k kế thừa user ở use case tổng quan
+- Xóa chức năng "Gửi thêm đồ" ở use case phân rã đặt vé
+- Làm lại use case phân rã chức năng của admin cho giống ở use case tổng quan
+- Quy trình hđ viết thêm hệ thống có nhiều quy trình nhưng chọn những chức năng quan trọng nhất
+- Thêm sơ đồ thực thể liên kết
+- use case Tạo chuyến đi => QUản lý chuyến đi
+- Chương 5 đẩy lên mục -2.3--2.4

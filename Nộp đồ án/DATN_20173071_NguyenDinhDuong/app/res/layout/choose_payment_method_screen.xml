@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.book_ticket.ChoosePaymentMethod"
+    android:background="@color/backgroundColor">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutPaymentMethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBarChoosePaymentMethod"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/secondaryColor"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="Phương thức thanh toán"
+            app:titleCentered="true"
+            app:titleTextColor="@color/blueText" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="70dp"
+        android:background="@color/secondaryColor"
+        android:padding="10dp">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:checkedButton="@+id/radio_button_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <RadioButton
+                android:id="@+id/rdb_cash"
+                android:checked="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Tiền mặt"
+                android:textSize="16sp"/>
+            <RadioButton
+                android:id="@+id/rdb_atm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Thẻ ngân hàng"
+                android:textSize="16sp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:background="@color/white"
+                android:layout_marginBottom="10dp"
+                android:layout_marginHorizontal="20dp">
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:text="Viettinbank">
+                </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
+            <RadioButton
+                android:id="@+id/rdb_viettelpay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Viettelpay"
+                android:textSize="16sp"/>
+            <RadioButton
+                android:id="@+id/rdb_zalopay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Zalopay"
+                android:textSize="16sp"/>
+            <RadioButton
+                android:id="@+id/rdb_momo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Ví Momo"
+                android:textSize="16sp"/>
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/secondaryColor"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="5dp">
+
+        <TextView
+            android:id="@+id/title_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Tổng số tiền"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <Button
+            android:id="@+id/pay_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/lightYellowButton"
+            android:text="Thanh toán"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/title_price"></Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

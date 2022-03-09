@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.book_ticket.ChooseService"
+    android:background="@color/backgroundColor"
+    android:padding="10dp">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutChooseService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBarChooseService"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/secondaryColor"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="Dịch vụ khác"
+            app:titleCentered="true"
+            app:titleTextColor="@color/blueText" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayoutChooseService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.book_ticket.ArrivalLocationFragment"
+        android:background="@color/secondaryColor"
+        android:padding="10dp"
+        android:layout_marginTop="20dp">
+
+        <CheckBox
+            android:id="@+id/cb_goods"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:text="Đăng ký gửi thêm đồ"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/edt_goods"
+            android:layout_marginHorizontal="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:hint="Xe máy + 1 vali"
+            app:layout_constraintStart_toStartOf="@+id/cb_goods"
+            app:layout_constraintTop_toBottomOf="@+id/cb_goods">
+        </EditText>
+        <TextView
+            android:id="@+id/tv_goods_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/edt_goods"
+            app:layout_constraintTop_toBottomOf="@+id/edt_goods"
+            android:text="(Gửi thùng hàng vui lòng ghi thêm kích thước)"
+            android:textStyle="italic"
+            android:textSize="12sp">
+        </TextView>
+
+        <CheckBox
+            android:id="@+id/cb_present"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:text="Đăng ký mua quà/đặc sản"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_goods_des"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/edt_present"
+            android:layout_marginHorizontal="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/cb_present"
+            app:layout_constraintTop_toBottomOf="@+id/cb_present"
+            android:hint="Ghi chú"
+            android:paddingLeft="10dp">
+        </EditText>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/secondaryColor"
+            app:layout_constraintTop_toBottomOf="@+id/edt_present">
+        </View>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/secondaryColor"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="5dp">
+
+        <TextView
+            android:id="@+id/title_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Tổng số tiền"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <Button
+            android:id="@+id/continue_btn_choose_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/lightYellowButton"
+            android:text="Tiếp tục"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/title_price"></Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
